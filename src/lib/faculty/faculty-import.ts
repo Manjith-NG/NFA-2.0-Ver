@@ -142,10 +142,10 @@ export function normalizeFacultyImportRow(row: FacultyImportRow): FacultyImportR
   let firstName = row.firstName.trim();
   let lastName = row.lastName.trim();
   let phone = extractPhone(row.phone);
-  let designationCode = row.designationCode;
+  const designationCode = row.designationCode;
   let positionCode = row.positionCode;
   let password = row.password;
-  let roleCode = row.roleCode;
+  const roleCode = row.roleCode;
 
   if (firstName && !firstName.includes("@") && firstName.split(" ").length > 2) {
     const parsed = parseRepeatedName(firstName);
